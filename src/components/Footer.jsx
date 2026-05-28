@@ -103,7 +103,7 @@ export default function Footer() {
             <h4 style={{ fontFamily: 'Space Grotesk, sans-serif', fontSize: '0.85rem', fontWeight: 700, color: 'var(--txt-1)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1.25rem' }}>
               Serviços
             </h4>
-            {['IA & Machine Learning', 'Chatbot Inteligente', 'Automação WhatsApp', 'Consultoria de TI'].map(item => (
+            {['Sites & Landing Pages', 'Chatbot Inteligente', 'Automação WhatsApp', 'Consultoria de TI'].map(item => (
               <a
                 key={item}
                 href="#servicos"

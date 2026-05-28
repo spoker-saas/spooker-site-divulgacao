@@ -4,13 +4,15 @@ const services = [
   {
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        <rect x="2" y="3" width="20" height="14" rx="2" />
+        <path d="M8 21h8M12 17v4" />
+        <path d="M7 8h10M7 11h6" />
       </svg>
     ),
-    title: 'IA & Machine Learning',
+    title: 'Sites & Landing Pages',
     description:
-      'Modelos personalizados treinados com os dados da sua empresa para previsão de demanda, análise de comportamento, detecção de fraudes e muito mais.',
-    features: ['Modelos preditivos', 'Análise de dados', 'Automação inteligente'],
+      'Desenvolvemos sites modernos e landing pages de alta convers\u00e3o com design exclusivo, performance otimizada e foco total em gerar leads e vendas para o seu neg\u00f3cio.',
+    features: ['Design responsivo', 'Alta convers\u00e3o', 'SEO otimizado'],
     color: '#7c3aed',
     badge: 'Mais popular',
   },

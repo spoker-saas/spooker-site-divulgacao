@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Reveal from './Reveal'
 
 const services = [
-  'IA & Machine Learning',
+  'Sites & Landing Pages',
   'Chatbot Inteligente',
   'Automação WhatsApp',
   'Consultoria de TI',
