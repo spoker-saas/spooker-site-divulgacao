@@ -301,7 +301,7 @@ export default function Hero() {
       </div>
 
       {/* ── Scroll hint ── */}
-      <div style={{
+      <div className="hide-mobile" style={{
         position: 'absolute', bottom: '2.2rem', right: '2rem',
         display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.35rem',
         color: 'var(--txt-3)', fontSize: '0.7rem', letterSpacing: '0.08em',

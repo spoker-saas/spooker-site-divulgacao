@@ -43,6 +43,7 @@ export default function Navbar() {
           <img
             src={logo}
             alt="Spooker"
+            className="nav-logo"
             style={{
               height: 80,
               width: 'auto',

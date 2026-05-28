@@ -185,9 +185,9 @@ body {
   transition: all 0.35s ease;
 }
 .glass-card:hover {
-  background: rgba(255,255,255,0.08);
-  border-color: rgba(124,58,237,0.75);
-  box-shadow: 0 0 0 1px rgba(124,58,237,0.45), 0 12px 48px rgba(124,58,237,0.3);
+  background: rgba(255,255,255,0.06);
+  border-color: transparent;
+  box-shadow: 0 12px 48px rgba(124,58,237,0.25);
   transform: translateY(-6px);
 }
 
@@ -260,13 +260,20 @@ body {
   position: relative;
   border-radius: 16px;
 }
+/* Gradient border via mask — só mostra na borda de 1px, nunca invade o interior */
 .grad-border::before {
   content: '';
   position: absolute;
-  inset: -1px;
-  border-radius: 17px;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
   background: linear-gradient(135deg, var(--purple), var(--cyan));
-  z-index: -1;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
   opacity: 0;
   transition: opacity 0.35s ease;
 }
@@ -284,4 +291,48 @@ body {
 @media (max-width: 768px) {
   .section-pad { padding: 4rem 0; }
   .hide-mobile { display: none !important; }
+  .container { padding: 0 1rem; }
+
+  /* Navbar */
+  .nav-logo { height: 54px !important; }
+
+  /* Tipografia */
+  .section-sub { font-size: 0.95rem; }
+
+  /* Buttons — levemente menores */
+  .btn-primary,
+  .btn-secondary,
+  .btn-ghost {
+    padding: 0.75rem 1.4rem;
+    font-size: 0.875rem;
+  }
+
+  /* Stats — força 2 colunas */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Contact form linha nome/telefone — empilha */
+  .contact-name-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Footer — 2 colunas no móvel */
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem !important;
+  }
 }
+
+@media (max-width: 480px) {
+  .section-pad { padding: 3rem 0; }
+
+  /* WhySpooker reasons — 1 coluna em telas muito pequenas */
+  .reasons-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Footer — 1 coluna */
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }}

@@ -37,7 +37,7 @@ export default function WhySpooker() {
   return (
     <section id="por-que" className="section-pad section-alt">
       <div className="container">
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(500px, 1fr))', gap: '4rem', alignItems: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(500px, 100%), 1fr))', gap: 'clamp(2rem, 5vw, 4rem)', alignItems: 'center' }}>
 
           {/* Left column — text */}
           <Reveal direction="right" duration={800}>
@@ -80,9 +80,9 @@ export default function WhySpooker() {
 
           {/* Right column — reasons grid */}
           <Reveal direction="left" duration={800} delay={100}>
-            <div style={{
+            <div className="reasons-grid" style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
             gap: '1rem',
           }}>
             {reasons.map((r, i) => (

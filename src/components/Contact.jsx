@@ -158,7 +158,7 @@ export default function Contact() {
                   Solicitar diagnóstico grátis
                 </h3>
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
+                <div className="contact-name-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
                   <div>
                     <label htmlFor="contact-name" style={labelStyle}>Nome *</label>
                     <input
